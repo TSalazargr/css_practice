@@ -18,6 +18,9 @@ Let's break it down:
 - rel="stylesheet": This attribute defines the relationship between the linked document and the current document. In this case, it indicates that the linked document is a stylesheet.
 - type="text/css": This attribute specifies the type of the linked document. In this case, it specifies that the document is a CSS file.
 
+You can also have a style tag in the head of the html page that contains all the css needed instead. 
+  This isn't ideal though, because then you can't share your CSS across multiple pages.
+
 CSS SYNTAX
 
 The syntax for CSS code is the following:
@@ -127,3 +130,20 @@ img{
   width: 50%;
   
 }
+
+TAGS AND CLASSES
+
+It's also possible to directly address a single tag or more by giving them a class name.
+
+👉 Here's an example of how I've created the blurb class directly in a <p> tag in the index.html page.
+
+<p class = "greeting">Hello world</p>
+
+Now, I can style my 'greeting' class in the style.css file. Notice how I've referred to it using dotgreeting -> .greeting
+
+.greeting{
+  font-style: italic;
+  font-weight: bold;
+}
+
+You can learn more about CSS here https://www.w3schools.com/cssref/index.php
