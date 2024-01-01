@@ -1,0 +1,129 @@
+CCS is short for cascading style sheets.
+
+CSS lets us create default settings & formats and apply them to parts of our page. It's a bit like having formatting subroutines that you can call at any time.
+
+The syntax to connect an external CSS file to a HTML document is the following:
+
+<html>
+
+<head>
+  <title>title</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+Let's break it down:
+
+- <link>: This is an HTML tag used to link external resources to a webpage.
+- href="style.css": This attribute specifies the path to the external CSS file. In this case, it's named "style.css" and is located in the same directory as the HTML file.
+- rel="stylesheet": This attribute defines the relationship between the linked document and the current document. In this case, it indicates that the linked document is a stylesheet.
+- type="text/css": This attribute specifies the type of the linked document. In this case, it specifies that the document is a CSS file.
+
+CSS SYNTAX
+
+The syntax for CSS code is the following:
+
+html tag {
+  attribute: value;
+  attribute: value;
+}
+
+When writing CSS, you have to take into account the following things:
+
+The curly braces are important - they surround the style for each tag.
+Each line should finish with a semi colon - or it won't work.
+Font family lets you pick a particular font or general style for your text. 
+  It's generally good practice to use general style rather than specify one font, 
+  because the one you pick might not be supported by all web browsers. 
+  You can find some web-safe fonts here: https://www.w3schools.com/cssref/css_websafe_fonts.php
+
+COMMENTING
+
+To leave comments in your CSS code, place your plain text inside /* */ marks.
+
+/* This code affects the entire HTML and body parts of the html file */
+html, body {
+  height: 100%;
+  width: 100%; 
+}
+
+ASSIGN A STYLE TO MULTIPLE TAGS
+
+To assign the same style to multiple tags, just use a comma when listing the tags it will affect:
+
+h1, h2{
+  font-family: sans-serif;
+  font-size: 24px;
+  color: blue;
+  background-color: #d3d345;
+  text-align:center;
+    
+}
+
+If I want to be one or more values to be different in one of the tags, I can just specify it later:
+
+h2{
+  font-size: 12px;
+  
+}
+
+This second style for <h2> works a bit like sub-classes did in OOP. It inherits all the properties from the first style and then 
+  applies the new settings as well, prioritizing the settings in the second style if there is a conflict.
+
+BODY SIZE
+
+You can set the size of the body of the HTML document like this:
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+HEADING STYLE
+
+The following script is an example of how to choose the style of a heading.
+
+h1{
+  font-family: sans-serif;
+  font-size: 24px;
+  color: blue;
+  background-color: #d3d345;
+}
+
+PARAGRAPH STYLE
+
+p{
+  font-family: sans-serif;
+  font-size: 10px;
+  color: blue;    
+}
+
+BACKGROUND COLOR
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #FF0000; /* Sets the background color to red */
+}
+
+ALIGNMENT
+
+h1{
+  font-family: sans-serif;
+  font-size: 24px;
+  color: blue;
+  background-color: #d3d345;
+  text-align:center;
+    
+}
+
+IMAGES
+
+We can also use CSS with our image tags. Centering an image isn't very intuitive, but we can do it like this:
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
